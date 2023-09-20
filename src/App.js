@@ -15,12 +15,14 @@ function App() {
 	const [userInfo, setUserInfo] = useState({ name: "John", age: 25 });
 	const [array, setArray] = useState(["John", "Jane", "Joe", "Jill"]);
 
+
+
 	console.log("file: App.js:13   App   userInfo:", userInfo);
 
 	//* Now below we are going to call our Level2 Component & AlsoLevel2 Component, and pass down the state {userInfo} as props so that we can use them in both.Without passing them down as a prop it is like they don't exist in the Level2 Component.
 	return (
 		<div className="App">
-			<MapEx array={array} setArray={setArray} />
+			<MapEx  array={array} setArray={setArray} />
 			<Level2 userInfo={userInfo} setUserInfo={setUserInfo} />
 			<AlsoLevel2 userInfo={userInfo} />
 			<img src={image} alt="screenshot" className="imageStyle" />

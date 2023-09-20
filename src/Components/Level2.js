@@ -11,8 +11,12 @@ export default function Level2({ userInfo , setUserInfo }) {
 	const { name, age } = userInfo; //* If you haven't covered destructuring you can
 	//* just use userInfo.name and userInfo.age instead of destructuring.
 
+
+
+
 function updatingName(newName) {
-	setUserInfo({ ...userInfo, name: newName });
+	console.log(newName	)
+	setUserInfo({ name: newName, age: 25 });
 }
 
 console.log(userInfo);
@@ -24,6 +28,9 @@ console.log(userInfo);
 			<h1 className="redBorder">
 				Hello {name}, You're getting old. {age} isn't young anymore!
 			</h1>
+
+			<input type="text" id="newFirstName" />
+			<button onClick={() => updatingName(document.getElementById('newFirstName').value)}>Submit</button>
 		</>
 	);
 }

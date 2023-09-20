@@ -12,7 +12,10 @@ document.getElementById('box').value = ''
     <div>
         <h1>
         {array.map((m) => { 
-            return <>{m} </>
+            return (
+            <> {m} </>
+            )
+
         })}
         </h1>
         <input type="text" id='box' />
